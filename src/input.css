@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+    position: relative;
+    color: white;
+    padding: 0 0 5px;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: calc(100% - 0.5rem);
+}
+
+@media (max-width: 768px) {
+    .nav-link:hover::after {
+        width: calc(100% - 1rem);
+    }
+
+    .nav-link {
+        font-size: 0.8rem; /* Tamanho de texto menor para telas menores */
+    }
+}
