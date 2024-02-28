@@ -22,30 +22,58 @@
 
 
 .nav-link:hover::after {
-    width: calc(100% );
+    width: calc(100%);
+}
+
+header {
+    background-image: url(/assets/header_bg.png);
+    height: 80vh;
+}
+
+header h1, button{
+    animation: fade-down 0.5s;
+}
+
+#logo_ab img{
+    max-width: 500px;
+} 
+
+/* ANIMATION */
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
 
 @media (max-width: 768px) {
     .nav-link:hover::after {
-        width: calc(100% );
+        width: calc(100%);
     }
 
     .nav-link {
-        font-size: 0.8rem; /* Tamanho de texto menor para telas menores */
+        font-size: 0.8rem;
+        /* Tamanho de texto menor para telas menores */
     }
-    
+
 }
 
 @media (max-width: 400px) {
     .flex-col.md\:flex-row {
         flex-direction: column;
     }
-    
+
     .flex.items-center.mb-4.md\:mb-0 {
         margin-bottom: 0;
     }
 
-    .md\:block\m-2{
+    .md\:block\m-2 {
         margin-left: 0;
     }
 }
