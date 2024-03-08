@@ -34,9 +34,7 @@ header h1, button{
     animation: fade-down 0.5s;
 }
 
-#logo_ab img{
-    max-width: 500px;
-} 
+
 
 /* ANIMATION */
 
@@ -64,16 +62,3 @@ header h1, button{
 
 }
 
-@media (max-width: 400px) {
-    .flex-col.md\:flex-row {
-        flex-direction: column;
-    }
-
-    .flex.items-center.mb-4.md\:mb-0 {
-        margin-bottom: 0;
-    }
-
-    .md\:block\m-2 {
-        margin-left: 0;
-    }
-}
